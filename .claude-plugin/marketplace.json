@@ -1,0 +1,21 @@
+{
+  "name": "gpt-image-2-combined",
+  "owner": {
+    "name": "community"
+  },
+  "metadata": {
+    "description": "GPT-Image-2 combined prompt skill — synthesized from YouMind-OpenLab, ZeroLu, and freestylefly. Covers 13 template categories, 20+ industrial templates, and special tricks from all three repos.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "gpt-image-2-combined",
+      "description": "Turn any image generation intent into a production-ready GPT-Image-2 prompt. Covers UI, poster, product, brand, photo, illustration, character, infographic, game, history, and more.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./agents/skills/gpt-image-2-combined"
+      ]
+    }
+  ]
+}

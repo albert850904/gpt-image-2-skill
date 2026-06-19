@@ -1,0 +1,9 @@
+{
+  "name": "gpt-image-2-combined-mcp",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "openai": "^4.0.0"
+  }
+}

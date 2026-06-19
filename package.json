@@ -1,0 +1,37 @@
+{
+  "name": "gpt-image-2-combined",
+  "version": "1.0.0",
+  "description": "GPT-Image-2 combined prompt skill + MCP server. Integrates Claude Code skill and Codex agent with OpenAI Images API. One-line install.",
+  "type": "module",
+  "bin": {
+    "gpt-image-2-combined": "scripts/cli.mjs"
+  },
+  "files": [
+    "agents/skills/gpt-image-2-combined",
+    "mcp/src",
+    "scripts",
+    ".env.example",
+    ".claude-plugin"
+  ],
+  "scripts": {
+    "install:skill": "node scripts/cli.mjs install",
+    "start:mcp": "node scripts/cli.mjs mcp"
+  },
+  "keywords": [
+    "gpt-image-2",
+    "claude-code",
+    "skill",
+    "mcp",
+    "openai",
+    "image-generation",
+    "prompt-engineering"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "openai": "^4.0.0"
+  }
+}

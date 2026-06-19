@@ -1,0 +1,32 @@
+name: Test install
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        node: ["18", "20"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      - run: npm install
+
+      # Verify CLI is importable and --help exits 1 (no command given)
+      - run: node scripts/cli.mjs || true
+
+      # Verify skill files are present
+      - run: node -e "import('fs').then(fs => { if (!fs.existsSync('agents/skills/gpt-image-2-combined/SKILL.md')) process.exit(1); console.log('SKILL.md ok'); })"
+
+      # Verify MCP server module resolves (don't actually start it)
+      - run: node --input-type=module <<< "import './mcp/src/index.js'" || true

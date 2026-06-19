@@ -1,0 +1,10 @@
+display_name: GPT-Image-2 Combined Prompt Engine
+short_description: >
+  Turn any image generation intent into a production-ready GPT-Image-2 prompt.
+  Covers all categories: UI, poster, product, brand, photo, illustration,
+  character, infographic, game, history, document — plus special tricks from
+  three community repos (YouMind / ZeroLu / freestylefly).
+default_prompt: >
+  Use the GPT-Image-2 combined prompt engine to turn my image generation intent
+  into a production-ready prompt. Read references/combined-tricks.md before
+  choosing a template.

@@ -1,0 +1,9 @@
+display_name: GPT-Image-2 Combined Prompt Engine
+short_description: >
+  Claude agent spec for the GPT-Image-2 combined prompt skill.
+  Covers all 13 template categories and special power tricks synthesized from
+  YouMind-OpenLab, ZeroLu, and freestylefly community repositories.
+default_prompt: >
+  Use the GPT-Image-2 combined prompt skill to convert the user's image
+  generation request into a production-ready prompt. Refer to
+  references/combined-tricks.md for all templates and tricks before generating.
